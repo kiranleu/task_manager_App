@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extendes "base.html" %}
+ {% block content %}
     
     <h1> Tasks</h1>
     
+    
     {% for task in tasks%}
-    <p>{{task.task_name}}</p>
-    <hr>
+    <h1>{{task.task_name}}</h1>
+    <hr></hr>
     <p>{{task.task_description}}</p>
     {% endfor %}
-    </hr>
-</body>
-</html>
+   {% endblock content %}  
